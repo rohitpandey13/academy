@@ -1,0 +1,10 @@
+version: '2'
+services:
+  notebook:
+    build: notebook
+    ports:
+      - "8888:8888"
+    depends_on:
+      - cassandra
+  cassandra:
+    image: cassandra
