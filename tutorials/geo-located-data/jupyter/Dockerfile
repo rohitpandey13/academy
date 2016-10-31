@@ -5,8 +5,8 @@ WORKDIR /home/$NB_USER/work
 
 # add extra packages
 ADD requirements.yml .
-RUN pip install requirements.yml
+RUN pip install -r requirements.yml
 
 # set workdir as home, add a directory for notebooks
 WORKDIR /home/$NB_USER
-RUN mkdir notebooks
+ADD notebooks .
